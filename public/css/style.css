@@ -1,0 +1,132 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: black;
+}
+.navbar img{
+    width:300px;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px;
+    border-bottom: solid 1px aliceblue;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+}
+.navbar ul li a{
+    margin: 0 30px;
+    text-decoration: none;
+    color: aliceblue;
+}
+.navbar ul li{
+    margin: 10px;
+}
+.navbar ul li a:hover{
+    border: solid 1px aliceblue;
+    box-shadow: inset 0 0 10px aliceblue;
+    padding: 5px 5px;
+    border-radius: 20px;   
+}
+
+/* LOGIN PAGE */
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.login form{
+    width: 500px;
+    padding: 20px;
+    border: solid 1px aliceblue;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(235, 198, 14);
+}
+.login img{
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+.login input{
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: solid 1px aliceblue;
+}
+.login form{
+    text-align: center;
+}
+.login button{
+    padding: 10px 20px;
+    border: none;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    font-size: 28px;
+}
+.login span{
+    color: red;
+}
+.login button:hover{
+    background-color: rgb(248, 245, 245);
+    color: aliceblue;
+}
+.loginA a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+/* REGISTER PAGE */
+.RegisterWrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.RegisterWrapper form{
+    width: 500px;
+    padding: 20px;
+    border: solid 1px aliceblue;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(235, 198, 14);
+}
+.RegisterWrapper img{
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+}
+.RegisterWrapper input{
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: solid 1px aliceblue;
+}
+.RegisterWrapper form{
+    text-align: center;
+}
+.RegisterWrapper select{
+    width: 50%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: solid 1px aliceblue;
+}
+.RegisterWrapper select option{
+    padding: 10px;
+
+}
+.RegisterWrapper span{
+    color: red;
+}
+.RegisterA a{ 
+    text-decoration: none;
+    color: aliceblue;
+}
