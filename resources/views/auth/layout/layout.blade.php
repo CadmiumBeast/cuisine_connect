@@ -29,7 +29,7 @@
                     @csrf
                 </form>
             </li>
-            <li><a class="Username" >{{ Auth::user()->name }}</a></li>
+            <li><a class="Username" href="{{ route(Auth::user()->type . '.dashboard') }}" >{{ Auth::user()->name }}</a></li>
             @endguest
         </ul>
     </div>

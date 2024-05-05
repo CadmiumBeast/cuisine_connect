@@ -45,12 +45,12 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
 
             if (auth()->user()->type == 'Admin') {
-                return redirect()->route('admin.dashboard');
+                return redirect()->route('Admin.dashboard');
             }else if (auth()->user()->type == 'Customer') {
-                return redirect()->route('customer.dashboard');
+                return redirect()->route('Customer.dashboard');
             }
             else if (auth()->user()->type == 'Restaurants'){
-                return redirect()->route('restaurants.dashboard');
+                return redirect()->route('Restaurants.dashboard');
             }
             else
             {

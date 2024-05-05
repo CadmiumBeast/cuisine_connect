@@ -29,15 +29,18 @@ Route::controller(LoginController::class)->group(function () {
 });
 
 Route::middleware(['auth', 'user-access:Admin'])->group(function () {
-    Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'admin'])->name('admin.dashboard');
+    Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'admin'])->name('Admin.dashboard');
+    Route::get('admin/viewUsers', [App\Http\Controllers\AdminController::class, 'viewUsers'])->name('admin.viewUsers');
+    Route::get('admin/viewRestaurants', [App\Http\Controllers\AdminController::class, 'viewRestaurants'])->name('admin.viewRestaurants');
 });
 
 
 Route::middleware(['auth', 'user-access:Customer'])->group(function () {
-    Route::get('/customer/dashboard', [App\Http\Controllers\HomeController::class, 'customer'])->name('customer.dashboard');
+    Route::get('/customer/dashboard', [App\Http\Controllers\HomeController::class, 'customer'])->name('Customer.dashboard');
+
 });
 
 
 Route::middleware(['auth', 'user-access:Restaurants'])->group(function () {
-    Route::get('/restaurants/dashboard', [App\Http\Controllers\HomeController::class, 'restaurants'])->name('restaurants.dashboard');
+    Route::get('/restaurants/dashboard', [App\Http\Controllers\HomeController::class, 'restaurants'])->name('Restaurants.dashboard');
 });
