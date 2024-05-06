@@ -5,10 +5,10 @@
 <div class="main">
     <div class="adminOptions">
         <div class="viewResturants">
-            <a href="{{ route('admin.viewRestaurants') }}">View Restaurants</a>
+            <a href="{{ route('Admin.viewRestaurants') }}">View Restaurants</a>
         </div>
         <div class="viewUsers">
-            <a href="{{ route('admin.viewUsers') }}">View Users</a>
+            <a href="{{ route('Admin.viewUsers') }}">View Users</a>
         </div>
     </div>
 

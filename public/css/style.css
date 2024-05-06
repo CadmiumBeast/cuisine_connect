@@ -226,12 +226,12 @@ body{
     padding: 20px;
     box-shadow: 0 0 10px rgb(235, 198, 14);
 }
-.resinfocardbut, .resinfocardbut{
+.resinfocardbut, .userinfocardbut{
     display: flex;
     justify-content: space-evenly;
     margin-top: 20px;
 }
-.resinfocardbut a, .resinfocardbut a{
+.resinfocardbut a,.userinfocardbut a{
     text-decoration: none;
     color: aliceblue;
     padding: 10px 20px;
@@ -240,9 +240,77 @@ body{
     font-size: 20px;
     border-radius: 20px;
 }
-.resinfocardbut a:hover, .resinfocardbut a:hover{
+.resinfocardbut a:hover, .userinfocardbut button:hover, .userinfocardbut a:hover{
     border: solid 1px aliceblue;
     border-radius: 20px;
     box-shadow: 0 0 10px rgb(235, 198, 14);
     transform: scale(1.1);
+}
+.userinfocardbut button{
+    text-decoration: none;
+    color: aliceblue;
+    padding: 10px 20px;
+    border: solid 1px aliceblue;
+    border-radius: 5px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: black;
+}
+
+/* Create User */
+.createUserform{
+    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.createUserform input{
+    width: 200px;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: solid 1px aliceblue;
+}
+.createUserform button{
+    padding: 10px 20px;
+    border: none;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    font-size: 28px;
+}
+.createUserform label{
+    color: aliceblue;
+    font-size: 20px;
+}
+.editUserform{
+    
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+.editUserform input{
+    width: 200px;
+    padding: 8px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: solid 1px aliceblue;
+}
+.editUserform button{
+    padding: 10px 20px;
+    border: none;
+    background-color: aliceblue;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    font-size: 28px;
+}
+.editUserform label{
+    color: aliceblue;
+    font-size: 20px;
 }

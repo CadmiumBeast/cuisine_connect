@@ -1,1 +1,4 @@
-<h1>Customer</h1>
+@extends('auth.layout.layout')
+@section('content')
+
+@endsection

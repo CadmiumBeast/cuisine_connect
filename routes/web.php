@@ -30,8 +30,13 @@ Route::controller(LoginController::class)->group(function () {
 
 Route::middleware(['auth', 'user-access:Admin'])->group(function () {
     Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'admin'])->name('Admin.dashboard');
-    Route::get('admin/viewUsers', [App\Http\Controllers\AdminController::class, 'viewUsers'])->name('admin.viewUsers');
-    Route::get('admin/viewRestaurants', [App\Http\Controllers\AdminController::class, 'viewRestaurants'])->name('admin.viewRestaurants');
+    Route::get('admin/viewUsers', [App\Http\Controllers\AdminController::class, 'viewUsers'])->name('Admin.viewUsers');
+    Route::get('admin/viewRestaurants', [App\Http\Controllers\AdminController::class, 'viewRestaurants'])->name('Admin.viewRestaurants');
+    Route::get('/admin/{customer}/edit', [App\Http\Controllers\CustomerController::class, 'editCustomer'])->name('admin.editCustomer');
+    Route::get('/admin/{customer}/create', [App\Http\Controllers\CustomerController::class, 'create'])->name('Admin.createCustomer');
+    Route::post('/admin/store', [App\Http\Controllers\CustomerController::class, 'store'])->name('Admin.storeCustomer');
+    Route::delete('/admin/{customer}/delete', [App\Http\Controllers\CustomerController::class, 'destroy'])->name('Admin.destroyCustomer');
+    Route::put('/admin/{customer}', [App\Http\Controllers\CustomerController::class, 'update'])->name('Admin.updateCustomer');
 });
 
 
