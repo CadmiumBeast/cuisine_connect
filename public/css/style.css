@@ -240,13 +240,13 @@ body{
     font-size: 20px;
     border-radius: 20px;
 }
-.resinfocardbut a:hover, .userinfocardbut button:hover, .userinfocardbut a:hover{
+.resinfocardbut button:hover,.resinfocardbut a:hover, .userinfocardbut button:hover, .userinfocardbut a:hover{
     border: solid 1px aliceblue;
     border-radius: 20px;
     box-shadow: 0 0 10px rgb(235, 198, 14);
     transform: scale(1.1);
 }
-.userinfocardbut button{
+.userinfocardbut button, .resinfocardbut button{
     text-decoration: none;
     color: aliceblue;
     padding: 10px 20px;

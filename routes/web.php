@@ -30,13 +30,22 @@ Route::controller(LoginController::class)->group(function () {
 
 Route::middleware(['auth', 'user-access:Admin'])->group(function () {
     Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'admin'])->name('Admin.dashboard');
+    //Customer Admin
     Route::get('admin/viewUsers', [App\Http\Controllers\AdminController::class, 'viewUsers'])->name('Admin.viewUsers');
+    Route::get('/admin/customer/{customer}/edit', [App\Http\Controllers\CustomerController::class, 'editCustomer'])->name('admin.editCustomer');
+    Route::get('/admin/customer/{customer}/create', [App\Http\Controllers\CustomerController::class, 'create'])->name('Admin.createCustomer');
+    Route::post('/admin/customer/store', [App\Http\Controllers\CustomerController::class, 'store'])->name('Admin.storeCustomer');
+    Route::delete('/admin/customer/{customer}/delete', [App\Http\Controllers\CustomerController::class, 'destroy'])->name('Admin.destroyCustomer');
+    Route::put('/admin/customer/{customer}', [App\Http\Controllers\CustomerController::class, 'update'])->name('Admin.updateCustomer');
+
+    //Restaurants Admin
     Route::get('admin/viewRestaurants', [App\Http\Controllers\AdminController::class, 'viewRestaurants'])->name('Admin.viewRestaurants');
-    Route::get('/admin/{customer}/edit', [App\Http\Controllers\CustomerController::class, 'editCustomer'])->name('admin.editCustomer');
-    Route::get('/admin/{customer}/create', [App\Http\Controllers\CustomerController::class, 'create'])->name('Admin.createCustomer');
-    Route::post('/admin/store', [App\Http\Controllers\CustomerController::class, 'store'])->name('Admin.storeCustomer');
-    Route::delete('/admin/{customer}/delete', [App\Http\Controllers\CustomerController::class, 'destroy'])->name('Admin.destroyCustomer');
-    Route::put('/admin/{customer}', [App\Http\Controllers\CustomerController::class, 'update'])->name('Admin.updateCustomer');
+    Route::get('/admin/restaurant/{restaurant}/edit', [App\Http\Controllers\RestaurantController::class, 'editRestaurant'])->name('admin.editRestaurant');
+    Route::get('/admin/restaurant/{restaurant}/create', [App\Http\Controllers\RestaurantController::class, 'create'])->name('Admin.createRestaurant');
+    Route::post('/admin/restaurant/store', [App\Http\Controllers\RestaurantController::class, 'store'])->name('Admin.storeRestaurant');
+    Route::put('/admin/restaurant/{restaurant}', [App\Http\Controllers\RestaurantController::class, 'update'])->name('Admin.updateRestaurant');
+    Route::delete('/admin/restaurant/{restaurant}/delete', [App\Http\Controllers\RestaurantController::class, 'destroy'])->name('Admin.destroyRestaurant');
+
 });
 
 
