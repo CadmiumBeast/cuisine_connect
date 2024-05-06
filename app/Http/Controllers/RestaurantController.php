@@ -53,9 +53,12 @@ class RestaurantController extends Controller
         }
     }
 
-    public function show(Restaurant $restaurant)
+    public function show($restaurant)
     {
-        return $restaurant;
+
+        return redirect()->route('Restaurants.editRestaurant', ['restaurant' => $restaurant]);
+
+
     }
 
     public function update(Request $request, Restaurant $restaurant)
@@ -79,8 +82,8 @@ class RestaurantController extends Controller
 
     public function destroy($restaurant)
     {
-        $user_id = User::where('id', $restaurant)->first();
-        $user_id->delete();
+        $userid = User::where('id', $restaurant)->first();
+        $userid->delete();
 
         if (auth()->user()->type === 'Admin') {
             return redirect()->route('Admin.viewRestaurants');

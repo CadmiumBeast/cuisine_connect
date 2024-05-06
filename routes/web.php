@@ -51,10 +51,23 @@ Route::middleware(['auth', 'user-access:Admin'])->group(function () {
 
 Route::middleware(['auth', 'user-access:Customer'])->group(function () {
     Route::get('/customer/dashboard', [App\Http\Controllers\HomeController::class, 'customer'])->name('Customer.dashboard');
-
 });
 
 
 Route::middleware(['auth', 'user-access:Restaurants'])->group(function () {
     Route::get('/restaurants/dashboard', [App\Http\Controllers\HomeController::class, 'restaurants'])->name('Restaurants.dashboard');
+    Route::get('/restaurants/{restaurant}/profile', [App\Http\Controllers\RestaurantController::class, 'show'])->name('Restaurants.show');
+    Route::get('/restaurants/{restaurant}/edit', [App\Http\Controllers\RestaurantController::class, 'editRestaurant'])->name('Restaurants.editRestaurant');
+    Route::get('/restaurants/{restaurant}/create', [App\Http\Controllers\RestaurantController::class, 'create'])->name('Restaurants.createRestaurant');
+    Route::post('/restaurant/store', [App\Http\Controllers\RestaurantController::class, 'store'])->name('Restaurants.storeRestaurant');
+    Route::put('/restaurant/{restaurant}', [App\Http\Controllers\RestaurantController::class, 'update'])->name('Restaurants.updateRestaurant');
+    Route::delete('/restaurant/{restaurant}/delete', [App\Http\Controllers\RestaurantController::class, 'destroy'])->name('Restaurant.destroy');
+
+    Route::prefix('/restaurant/item/')->group(function () {
+        Route::get('create', [App\Http\Controllers\ItemController::class, 'create'])->name('Item.create');
+        Route::post('store', [App\Http\Controllers\ItemController::class, 'store'])->name('Item.store');
+        Route::get('/change-availability/{item}', [App\Http\Controllers\ItemController::class, 'changeAvailability'])->name('Item.changeavailability');
+
+    });
+
 });

@@ -37,7 +37,7 @@ class CustomerController extends Controller
         return $customer;
     }
 
-    public function editCustomer($customer, User $user)
+    public function  editCustomer($customer, User $user)
     {
         $user_id = Customer::where('user_id', $customer)->first();
 

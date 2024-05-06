@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Item;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
@@ -30,7 +32,10 @@ class HomeController extends Controller
     }
     public function restaurants()
     {
-        return view('auth.dashboard.restaurantsdashboard');
+        $items = Item::where('user_id', Auth::user()->id)->get();
+
+        $user_id = Auth::user();
+        return view('auth.dashboard.restaurantsdashboard', compact('user_id', 'items'));
     }
 
 }

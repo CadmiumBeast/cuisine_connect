@@ -314,3 +314,58 @@ body{
     color: aliceblue;
     font-size: 20px;
 }
+/* Dashboard Resturant*/
+
+.items{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin: 20px;
+    color: whitesmoke;
+}
+.item{
+    border: solid 1px aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px;
+    
+}
+.items img{
+    width: 200px;
+    height: 200px;
+}
+.itemDetails a{
+    text-decoration: none;
+    color: aliceblue;
+    padding: 5px 10px;
+    border: solid 1px aliceblue;
+    border-radius: 5px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+.itemDetails a:hover{
+    border: solid 1px aliceblue;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(235, 198, 14);
+    transform: scale(1.1);
+}
+.restaurantOption{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+.restaurantOption a{
+    text-decoration: none;
+    color: aliceblue;
+    padding: 10px 20px;
+    border: solid 1px aliceblue;
+    border-radius: 5px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+.restaurantOption a:hover{
+    border: solid 1px aliceblue;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(235, 198, 14);
+    transform: scale(1.1);
+}

@@ -13,7 +13,8 @@ return new class extends Migration {
             $table->unsignedBigInteger('restaurant_id')->default('0');
             $table->string('name');
             $table->smallInteger('price');
-            $table->string('picture');
+            $table->text('picture');
+            $table->boolean('Availability')->default('1');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users');

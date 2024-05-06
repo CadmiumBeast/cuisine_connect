@@ -7,8 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Item extends Model
 {
     protected $fillable = [
+        'user_id',
+        'restaurant_id',
         'name',
         'price',
         'picture',
+        'Availability'
     ];
 }
