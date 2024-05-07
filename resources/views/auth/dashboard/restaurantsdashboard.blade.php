@@ -24,7 +24,7 @@
                         <div class="itemImage">
                             <img src="{{ asset('storage/path_images/'.$item->picture) }}" alt="">
                         </div>
-                        <div class="itemDetails">
+                        <div class="itemDetail">
                             <h3>{{$item->name}}</h3>
                             <p>{{$item->price}}</p>
                             <p>@if($item->Availability == 1)

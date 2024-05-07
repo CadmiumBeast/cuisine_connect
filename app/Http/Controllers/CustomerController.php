@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Customer;
+use App\Models\Item;
+use App\Models\Restaurant;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -15,6 +17,17 @@ class CustomerController extends Controller
     public  function create($customer)
     {
         return view('customer.create', compact('customer'));
+    }
+
+    public function resturantItems($restaurant)
+    {
+        $items = Item::where('user_id', $restaurant)->get();
+        $user = User::where('id', $restaurant)->first();
+        $restaurant = Restaurant::where('user_id', $restaurant)->first();
+
+
+        return view('item.view', compact('items', 'user', 'restaurant'));
+
     }
     public function store(Request $request)
     {

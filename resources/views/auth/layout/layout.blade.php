@@ -16,6 +16,9 @@
     <div class="navbar">
         <a href="{{route('welcome')}}"><img src="{{asset('images/logo.png')}}" /></a>
         <ul>
+            @if(auth()->user()->type == 'Customer')
+                <li><a href="{{route('Customer.viewcart',['customer', auth()->user()])}}">Cart</a></li>
+            @endif
             @guest
             <li><a class="{{ (request()->is('login')) ? 'active' : '' }}" href="{{ route('login') }}">Login</a></li>
             <li><a class="{{ (request()->is('register')) ? 'active' : '' }}" href="{{ route('register') }}">Register</a>

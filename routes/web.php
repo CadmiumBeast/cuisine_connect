@@ -51,6 +51,11 @@ Route::middleware(['auth', 'user-access:Admin'])->group(function () {
 
 Route::middleware(['auth', 'user-access:Customer'])->group(function () {
     Route::get('/customer/dashboard', [App\Http\Controllers\HomeController::class, 'customer'])->name('Customer.dashboard');
+    Route::get('/customer/{restaurant}/items', [App\Http\Controllers\CustomerController::class, 'resturantItems'])->name('Customer.resturantitems');
+    Route::post('/customer/cart/add/{item}', [App\Http\Controllers\CartController::class, 'addToCart'])->name('Customer.addToCart');
+    Route::get('/customer/cart/view/{customer}', [App\Http\Controllers\CartController::class, 'viewCart'])->name('Customer.viewcart');
+    Route::get('/customer/cart/checkout', [App\Http\Controllers\CartController::class, 'checkout'])->name('Customer.checkout');
+
 });
 
 

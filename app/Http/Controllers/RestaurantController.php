@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Item;
 use App\Models\Restaurant;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -83,6 +84,10 @@ class RestaurantController extends Controller
     public function destroy($restaurant)
     {
         $userid = User::where('id', $restaurant)->first();
+        $itemid = Item::where('user_id', $restaurant)->get();
+        foreach ($itemid as $item) {
+            $item->delete();
+        }
         $userid->delete();
 
         if (auth()->user()->type === 'Admin') {

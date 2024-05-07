@@ -180,7 +180,7 @@ body{
 .viewResturants, .viewUsers{
     margin-left: 20px;
 }
-.viewResturants a, .viewUsers a{
+.viewResturants a, .viewUsers a, .deleteAccount button{
     text-decoration: none;
     color: aliceblue;
     padding: 10px 20px;
@@ -188,8 +188,9 @@ body{
     border-radius: 5px;
     font-size: 20px;
     border-radius: 20px;
+    background-color: black;
 }
-.viewResturants a:hover, .viewUsers a:hover{
+.viewResturants a:hover, .viewUsers a:hover, .deleteAccount button:hover{
     border: solid 1px aliceblue;
     border-radius: 20px;
     box-shadow: 0 0 10px rgb(235, 198, 14);
@@ -334,7 +335,7 @@ body{
     width: 200px;
     height: 200px;
 }
-.itemDetails a{
+.itemDetail a{
     text-decoration: none;
     color: aliceblue;
     padding: 5px 10px;
@@ -343,7 +344,7 @@ body{
     font-size: 20px;
     border-radius: 20px;
 }
-.itemDetails a:hover{
+.itemDetail a:hover{
     border: solid 1px aliceblue;
     border-radius: 20px;
     box-shadow: 0 0 10px rgb(235, 198, 14);
@@ -368,4 +369,110 @@ body{
     border-radius: 20px;
     box-shadow: 0 0 10px rgb(235, 198, 14);
     transform: scale(1.1);
+}
+
+/* Home Page */
+.restaurantWrapper{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    margin: 20px;
+    color: whitesmoke;
+}
+.restaurantCard {
+    border: solid 1px aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px;
+    
+}
+.restaurantCard:hover{
+    border: solid 1px aliceblue;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(235, 198, 14);
+    transform: scale(1.1);
+}
+.restaurantCard a{
+    text-decoration: none;
+    color: aliceblue;
+    padding: 5px 10px;
+    
+}
+.restaurantCard a h3{
+    color: aliceblue;
+    font-size: 20px;
+}
+.restaurantCard a p{
+    color: aliceblue;
+    font-size: small;
+}
+
+/* View Items */
+
+.itemWrapper{
+    display: flex;
+    margin: 20px;
+    color: whitesmoke;
+}
+.itemWrapper img{
+    width: 200px;
+    height: 200px;
+}
+.itemDetails{
+    margin: 20px;
+}
+
+.createUserform, .editUserform{
+    padding: 40px;
+    margin-left: 40px;
+}
+.createUserform input[type="file"]{
+    border: none;
+    background-color: aliceblue;
+}
+
+.itemDetails form button{
+    text-decoration: none;
+    color: aliceblue;
+    padding: 10px 20px;
+    border: solid 1px aliceblue;
+    border-radius: 5px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: black;
+}
+.itemDetails form button:hover{
+    border: solid 1px aliceblue;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgb(235, 198, 14);
+    transform: scale(1.1);
+}
+.cartWrapper{
+    
+    justify-content: center;
+    
+    height: 100vh;
+}
+.cartItems{
+   
+    margin: 20px;
+    color: whitesmoke;
+}
+.cartItem{
+    border: solid 1px aliceblue;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 40px;
+    
+}
+.cartCheckout button{
+    text-decoration: none;
+    color: aliceblue;
+    padding: 10px 20px;
+    border: solid 1px aliceblue;
+    border-radius: 5px;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: black;
+    margin-left: 70px;
 }

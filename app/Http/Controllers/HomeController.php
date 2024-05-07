@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Item;
+use App\Models\Restaurant;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -28,7 +30,10 @@ class HomeController extends Controller
     }
     public function customer()
     {
-        return view('auth.dashboard.customerdashboard');
+        $restaurantUsers = User::where('type',"Restaurants")->get();
+        $allRestaurants = Restaurant::all();
+
+        return view('home', compact('allRestaurants', 'restaurantUsers'));
     }
     public function restaurants()
     {
