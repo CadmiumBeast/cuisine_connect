@@ -4,7 +4,7 @@
 <div class="main">
     <div class="restaurantWrapper">
         @foreach($restaurantUsers as $restaurantUser)
-        
+
             <div class="restaurantCard">
             <a href="{{ route('Customer.resturantitems',['restaurant' =>$restaurantUser->id]) }}">
                 <div class="restaurantName">
@@ -22,9 +22,10 @@
                 </div>
                 </a>
             </div>
-            
-            <div class="restaurantCard">
-            
+
+            <div>holy</div>
+
+
         @endforeach
 
     </div>
