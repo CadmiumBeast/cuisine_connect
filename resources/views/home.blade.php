@@ -22,6 +22,11 @@
                 </div>
                 </a>
             </div>
+            <div class="user">
+                <h2>
+                    Example
+                </h2>
+            </div>
             
         @endforeach
 
